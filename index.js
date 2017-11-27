@@ -99,7 +99,8 @@ client.on('message', message => {
 
         function execute(command) {
           let execution = shelljs.exec(command)
-          send(execution.stdout)
+          send(`\`\`\`xl
+            ${execution.stdout}\`\`\``)
         }
       }
 
