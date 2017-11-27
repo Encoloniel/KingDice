@@ -41,7 +41,7 @@ client.on('message', message => {
   //function send()
   function send(input) {
     try {
-      message.channel.send(input)
+      message.channel.send(input).catch(e => message.channel.send("null"))
     } catch (err) {
       message.channel.send(ess.errorHandle(err))
     }
@@ -95,9 +95,11 @@ client.on('message', message => {
 
       function gitPull(mes) {
         client.user.lastMessage.edit(mes).catch(e => console.log(e))
-        if (shelljs.exec('git pull"').code !== 0) {
-          client.user.lastMessage.edit('Error: Git pulling failed');
-          shelljs.exit(1);
+        execute('git pull')
+
+        function execute(command) {
+          let execution = shelljs.exec(command)
+          send(execution.stdout)
         }
       }
 

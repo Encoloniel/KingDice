@@ -15,7 +15,7 @@ module.exports = {
             },
             {
               name: "**Patreon (for monthly donations)**",
-              value: `NO LINK YET`
+              value: `https://www.patreon.com/user?u=8432148`
             },
             {
               name: "If you donate, you will be able to get a Donator role in my Discord server!",

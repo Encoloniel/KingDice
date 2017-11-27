@@ -42,6 +42,7 @@ const spellcheck = require('./commands/spellcheck')
 const changelog = require('./commands/changelog')
 const maintenance = require('./commands/maintenance')
 const donate = require('./commands/donate')
+const bash = require('./commands/bash')
 
 function isCommand(message, commandName) {
   if (message.content.split(" ")[0] == (bot.prefix + commandName)) {
@@ -191,6 +192,9 @@ module.exports = {
   ownerCommands: function(message, client, Discord) {
     if (isCommand(message, "eval")) {
       eval.purpose(message, client)
+    }
+    if (isCommand(message, "bash")) {
+      bash.purpose(message)
     }
     if (isCommand(message, "test")) {
       test.purpose(message, client, Discord)
