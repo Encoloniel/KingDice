@@ -13,8 +13,10 @@ module.exports = {
 
       message.channel.send(ess.clean(execution.stdout), {
         code: "xl"
-      }).catch(err => message.channel.send(`Oops! ${err}`))
-
+      }).catch(e => e)
+      message.channel.send(ess.clean(execution.stderr), {
+        code: "xl"
+      }).catch(e => e)
       return;
     } catch (err) {
       message.channel.send(ess.errorHandle(err));
