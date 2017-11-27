@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
+const shelljs = require('shelljs');
 
 //LOCAL REQUIREMENTS
 const ess = require('./ess');
@@ -84,16 +85,20 @@ client.on('message', message => {
   //Emergency in-line Commands
   if (message.content == "=r") {
     try {
-      message.channel.send("**Restarting bot in 3 seconds** You cannot cancel this execution.").catch(e => console.log(e))
+      message.channel.send("**Restarting bot in 5 seconds** You cannot cancel this execution.").catch(e => console.log(e))
       setTimeout(function() {
-        lastedit("Shutting down in one second!");
+        gitPull("Pulling from GitHub...");
       }, 1000);
       setTimeout(function() {
         exitnode();
-      }, 2000);
+      }, 4000);
 
-      function lastedit(mes) {
+      function gitPull(mes) {
         client.user.lastMessage.edit(mes).catch(e => console.log(e))
+        if (shelljs.exec('git pull"').code !== 0) {
+          client.user.lastMessage.edit('Error: Git pulling failed');
+          shelljs.exit(1);
+        }
       }
 
       function exitnode() {

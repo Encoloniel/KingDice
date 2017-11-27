@@ -17,6 +17,7 @@
     "discord.js": "^11.2.1",
     "iso-language-converter": "^1.1.0",
     "opusscript": "0.0.4",
+    "shelljs": "^0.7.8",
     "spelling": "^2.0.0",
     "urban-dictionary": "^1.0.6",
     "ytdl-core": "^0.18.2"
