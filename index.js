@@ -1,6 +1,9 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 const shelljs = require('shelljs');
+const {
+  stripIndents
+} = require('common-tags');
 
 //LOCAL REQUIREMENTS
 const ess = require('./ess');
@@ -41,7 +44,7 @@ client.on('message', message => {
   //function send()
   function send(input) {
     try {
-      message.channel.send(input).catch(e => message.channel.send("null"))
+      message.channel.send(input).catch(e => message.channel.send("Oops, there was an error sending this message."))
     } catch (err) {
       message.channel.send(ess.errorHandle(err))
     }
@@ -99,7 +102,7 @@ client.on('message', message => {
 
         function execute(command) {
           let execution = shelljs.exec(command)
-          send(`\`\`\`xl
+          send(stripIndents `\`\`\`xl
             ${execution.stdout}\`\`\``)
         }
       }
