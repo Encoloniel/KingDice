@@ -1,0 +1,10 @@
+
+**NAME**
+       spellcheck - checks the spelling of a word
+
+**SYNOPSIS**
+       spellcheck
+       spellcheck <word>
+
+**DESCRIPTION**
+       Checks the English dictionary and with an API to find a suggestive spelling or a boolean answer to the word

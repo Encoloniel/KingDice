@@ -1,0 +1,19 @@
+
+**NAME**
+       lowercase - take the whole string and change it to full lowercase
+
+**SYNOPSIS**
+       lowercase
+       lowercase <word1>
+       lowercase <word1> <word2> ...
+
+**DESCRIPTION**
+       Uses JavaScript's toLowerCase method to change the words after all to lowercase
+
+**EXAMPLE**
+        Hello, my name is King Dice!
+        hello, my name is king dice!
+```
+        <word1> <word2>
+        <word1>.toLowerCase() <word2>.toLowerCase()
+```

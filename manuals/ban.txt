@@ -1,0 +1,13 @@
+
+**NAME**
+       ban - banishes a user from a guild
+
+**SYNOPSIS**
+       ban <mention_user>
+       ban <mention_user> <ban_reason>
+
+**DESCRIPTION**
+       bans a member from the guild, letting them impossible to join back again unless advised otherwise, or unbanned by an administrator. Also DMs the member before the ban with a appeals server link and an information about the ban.
+
+**PERMISSIONS**
+        "MEMBER_BAN"

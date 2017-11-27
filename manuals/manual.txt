@@ -1,0 +1,10 @@
+
+**NAME**
+       manual - display a manual page
+
+**SYNOPSIS**
+       manual <command_name>
+       manual
+
+**DESCRIPTION**
+       Displays a manual of how to use a command. Shows you the information about the name, synopsis, description, constraints, permissions, and flags. If there are none under that category, that means the tag does not exist. Example variables with the <> tags means the value must be provided, and the tag [] means that the argument variable is optional to provide.

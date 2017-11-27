@@ -1,0 +1,14 @@
+
+**NAME**
+       help - show the help panel guide
+
+**SYNOPSIS**
+       help --onserver
+       help
+
+**DESCRIPTION**
+       help allows users to view the commands of the botuser and execute the command by its own
+
+**FLAGS**
+        --onserver
+                   Shows the help panel inside the guild channel. If else it will send through the message author's DMs

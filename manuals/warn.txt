@@ -1,0 +1,14 @@
+
+**NAME**
+       warn - warns a user by a reason
+
+**SYNOPSIS**
+       warn <user>
+       warn <user> <reason>
+       warn
+
+**DESCRIPTION**
+       warns a member by DMing the member, and also putting in chat that the member has been warned. There is no special function to this.
+
+**PERMISSIONS**
+        "MEMBER_KICK"

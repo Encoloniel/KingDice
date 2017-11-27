@@ -1,0 +1,10 @@
+
+**NAME**
+       changelog - display the log for the version
+
+**SYNOPSIS**
+       manual <version>
+       manual <null>
+
+**DESCRIPTION**
+       Displays a log and changes what happened in the specific version (if not selected, the latest). The version database start from 1.6.8.

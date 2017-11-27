@@ -1,0 +1,9 @@
+
+**NAME**
+       christian - posts image that reads "This is a Christian server, so no swearing"
+
+**SYNOPSIS**
+       christian
+
+**DESCRIPTION**
+       Shows a image taken from Imgur that states to not swear because the guild is based on the religion of Christianity

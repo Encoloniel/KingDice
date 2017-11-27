@@ -1,0 +1,13 @@
+
+**NAME**
+       verify - gives the message author a ("name", "Verified") role
+
+**SYNOPSIS**
+       verify
+
+**DESCRIPTION**
+       Checks if the guild has a Verified role from the object, creates one if there hasn't been, and gives the user the Verified role.
+       
+**PERMISSIONS**
+        Bot Only
+        "MANAGE_ROLES"

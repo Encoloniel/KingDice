@@ -1,0 +1,21 @@
+
+**NAME**
+       rolenick - Nicknames the user with the highest role name and their username
+
+**SYNOPSIS**
+       rolenick
+
+**DESCRIPTION**
+       Takes the highest role the message author has, and gives it as a tag into their username
+
+**EXAMPLE**
+```
+        '[role.name] message.author.username'
+```
+
+**PERMISSIONS**
+        User Only
+        "CHANGE_NICKNAME"
+
+        Bot Only
+        "MANAGE_NICKNAMES"

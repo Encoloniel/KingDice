@@ -1,0 +1,19 @@
+
+**NAME**
+       random - outputs random number between `min()` and `max()`
+
+**SYNOPSIS**
+       random
+       random <number1>
+       random <number1> <number2>
+
+**DESCRIPTION**
+       Outputs a Math.Random number between <number1> and <number2>.
+
+**FLAGS**
+       --integer Outputs a parseInt for the random value
+
+**CONSTRAINTS**
+       ```min() ≤  <number1> ≤  max()```
+       ```min() ≤  <number2> ≤  max()```
+       ```<number1> < <number2>```

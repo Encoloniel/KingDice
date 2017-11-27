@@ -1,0 +1,9 @@
+
+**NAME**
+       hello - shows basic info about the client
+
+**SYNOPSIS**
+       hello
+
+**DESCRIPTION**
+       Client introduces itself with a different image related to the avatar image

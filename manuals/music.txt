@@ -1,0 +1,13 @@
+
+**NAME**
+       music - plays music from a YouTube link/id
+
+**SYNOPSIS**
+       music
+       music <join>
+       music <leave>
+       music <play>
+       music <play> <link|id>
+
+**DESCRIPTION**
+       Use the command to first make the bot join the voice channel, and lets the bot play the music you have entered the command. 

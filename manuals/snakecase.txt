@@ -1,0 +1,19 @@
+
+**NAME**
+       snakecase - replaces every space by a underscore
+
+**SYNOPSIS**
+       snakecase
+       snakecase <word1>
+       snakecase <word1> <word2>
+
+**DESCRIPTION**
+       Replaces a line of string's space code to a underscore
+
+**EXAMPLE**
+        Hello, my name is King Dice!
+        Hello,_my_name_is_King_Dice!
+```
+        <word1> <word2>
+        <word1>_<word2>
+```

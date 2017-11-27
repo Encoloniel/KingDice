@@ -1,0 +1,9 @@
+
+**NAME**
+       serverinfo - shows you some properties about the server
+
+**SYNOPSIS**
+       serverinfo
+
+**DESCRIPTION**
+       Displays the icon, name, ID, owner(tag), region, verification level, channels, members, and the creation date

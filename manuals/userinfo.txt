@@ -1,0 +1,10 @@
+
+**NAME**
+       userinfo - check the user's information
+
+**SYNOPSIS**
+       userinfo <mention>
+       userinfo
+
+**DESCRIPTION**
+       Shows you the user's information including ID, Tag, Status, Nickname, Moderator (boolean), GuildJoin time, and the roles the user has.

@@ -1,0 +1,9 @@
+
+**NAME**
+       stats - shows internal information about the bot and its server
+
+**SYNOPSIS**
+       stats
+
+**DESCRIPTION**
+       Displays the CPU and RAM usage,  uptime (HHMMSS), array().length of the client.guild (amount of guilds the bot is on), the added number of members the guilds the bot is on, bot version in the package.json, and the DiscordJS API version that the bot is running on.

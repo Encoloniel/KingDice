@@ -1,0 +1,35 @@
+
+**NAME**
+       nick - Nicknames a user
+
+**SYNOPSIS**
+       nick
+       nick [nickname]
+       nick [mention]
+       nick [mention] [nickname]
+       nick <mention> <mention> ...
+
+**DESCRIPTION**
+       Removes any nickname for the message.author when no nickname and mention is provided; nicknames the message.author when a nickname is provided in the second argument; removes any nickname for the mention when no nickname in argument 3 are provided; changes the mention's nickname to the argument 3 when provided.
+
+**EXAMPLE**
+```
+        nick
+        > Nicknames yourself to null
+
+        nick [nickname]
+        > Nicknames yourself to [nickname]
+
+        nick [mention]
+        > Nicknames [mention] to null
+
+        nick [mention] [nickname]
+        > Nicknames [mention] to [nickname]
+```
+
+**PERMISSIONS**
+        User Only
+        "CHANGE_NICKNAME"
+
+        Bot Only
+        "MANAGE_NICKNAMES"

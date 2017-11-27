@@ -1,0 +1,12 @@
+**Changelog for version 1.6.8**
+
+Useless requirement fixes
+Added changelog command
+Added changelog database
+More use of the bot.json file for if statements
+Catching for promises in new user join message and setGame
+Server moved to DigitalOcean via FTP from Heroku
+Spellcheck bug fix
+Maintenance mode
+Maintenance mode toggle command
+Donate command for donation on PayPal and Patreon

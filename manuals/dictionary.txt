@@ -1,0 +1,10 @@
+
+**NAME**
+       dictionary - searches a term from urbandictionary.com and outputs
+
+**SYNOPSIS**
+       dictionary
+       dictionary <term>
+
+**DESCRIPTION**
+       Outputs the author, word, example, definition, accuracy (thumbs_up/thumbs_down), and a link in a nice RichEmbed

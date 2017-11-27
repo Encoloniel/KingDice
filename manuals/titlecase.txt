@@ -1,0 +1,15 @@
+
+**NAME**
+       titlecase - replaces every first word's character by a uppercase
+
+**SYNOPSIS**
+       titlecase
+       titlecase <word1>
+       titlecase <word1> <word2>
+
+**DESCRIPTION**
+       Replaces the first character of every word and changes it to an uppercase letter
+
+**EXAMPLE**
+        Hello, my name is King Dice!
+        Hello, My Name Is King Dice!

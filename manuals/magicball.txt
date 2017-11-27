@@ -1,0 +1,34 @@
+
+**NAME**
+       magicball - outputs one of the original answers from the magic 8 ball
+
+**SYNOPSIS**
+       magicball
+
+**DESCRIPTION**
+       Picks a Math.Random integer between 0 and 19, and shows the one of the array corresponding to the Math.Random integer. This happens 3 times by editing its own message.
+       There are 20 possible answers:
+       ```
+● It is certain
+● It is decidedly so
+● Without a doubt
+● Yes definitely
+● You may rely on it
+● As I see it, yes
+● Most likely
+● Outlook good
+● Yes
+● Signs point to yes
+● Reply hazy try again
+● Ask again later
+● Better not tell you now
+● Cannot predict now
+● Concentrate and ask again
+● Don't count on it
+● My reply is no
+● My sources say no
+● Outlook not so good
+● Very doubtful
+```
+
+        It circles through 2 of the answers, first outputing Hmmmm

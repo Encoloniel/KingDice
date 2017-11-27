@@ -1,0 +1,9 @@
+
+**NAME**
+       invite - gives you information on the invite links
+
+**SYNOPSIS**
+       invite
+
+**DESCRIPTION**
+       Displays 3 url and its info, including 2 bot invites (one with permission &php and one without), and a invite to the official help server (Discord)

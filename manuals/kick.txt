@@ -1,0 +1,13 @@
+
+**NAME**
+       kick - kicks a member from a guild
+
+**SYNOPSIS**
+       kick <mention_user>
+       kick <mention_user> <kick_reason>
+
+**DESCRIPTION**
+       kicks a member from the guild, letting them impossible to join back again unless getting a link to the server. Also DMs the member before the kick with a appeals server link and an information about the kick.
+
+**PERMISSIONS**
+        "MEMBER_KICK"

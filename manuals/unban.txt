@@ -1,0 +1,13 @@
+
+**NAME**
+       unban - unbans a user from a guild
+
+**SYNOPSIS**
+       unban <user_id>
+       unban
+
+**DESCRIPTION**
+       unbans a member from the guild, letting them possible to join back again with an invite link to the guild.
+
+**PERMISSIONS**
+        "MEMBER_BAN"

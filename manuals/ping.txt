@@ -1,0 +1,12 @@
+
+**NAME**
+       ping - shows the ping of the bot in ms
+
+**SYNOPSIS**
+       ping
+
+**DESCRIPTION**
+       Displays the difference between the message receive time and when the command was executed. Lower ms the better.
+
+**CONSTRAINTS**
+       ```0 ≤  <ping_in_ms> ≤  ∞```

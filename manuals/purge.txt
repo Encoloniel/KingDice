@@ -1,0 +1,16 @@
+
+**NAME**
+       purge - bulkDeletes messages
+
+**SYNOPSIS**
+       purge <messages_count>
+       purge
+
+**DESCRIPTION**
+       purges the chat by bulkDeleting the provided message count.
+
+**CONSTRAINTS**
+       ```0 ≤  <messages_count> ≤  100```
+
+**PERMISSIONS**
+        "MANAGE_MESSAGES"

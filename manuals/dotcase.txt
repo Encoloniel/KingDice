@@ -1,0 +1,19 @@
+
+**NAME**
+       dotcase - replaces every space by a underscore
+
+**SYNOPSIS**
+       dotcase
+       dotcase <word1>
+       dotcase <word1> <word2>
+
+**DESCRIPTION**
+       Replaces a line of string's space code to a period (dot)
+
+**EXAMPLE**
+        Hello, my name is King Dice!
+        Hello,.my.name.is.King.Dice!
+```
+        <word1> <word2>
+        <word1>.<word2>
+```

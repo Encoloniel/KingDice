@@ -1,0 +1,10 @@
+
+**NAME**
+       translate - use Google Translate's API to translate a certain language to English.
+
+**SYNOPSIS**
+       translate <sentence|word>
+       translate
+
+**DESCRIPTION**
+       Automatically detects the second argument and translates it to English and puts it out on screen.

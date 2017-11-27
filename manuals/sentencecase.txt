@@ -1,0 +1,15 @@
+
+**NAME**
+       sentencecase - replaces every first sentence's character by a uppercase
+
+**SYNOPSIS**
+       sentencecase
+       sentencecase <sentence1>
+       sentencecase <sentence1> <sentence2>
+
+**DESCRIPTION**
+       Replaces the first character of every sentence and changes it to an uppercase letter. Seperated a sentence by a `". "`
+
+**EXAMPLE**
+        Hello, my name is King Dice!
+        hello, my name is King Dice!

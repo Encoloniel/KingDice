@@ -1,0 +1,19 @@
+
+**NAME**
+       uppercase - take the whole string and change it to full uppercase
+
+**SYNOPSIS**
+       uppercase
+       uppercase <word1>
+       uppercase <word1> <word2> ...
+
+**DESCRIPTION**
+       Uses JavaScript's toUpperCase method to change the words after all to uppercase
+
+**EXAMPLE**
+        Hello, my name is King Dice!
+        HELLO, MY NAME IS KING DICE!
+```
+        <word1> <word2>
+        <word1>.toUpperCase() <word2>.toUpperCase()
+```

@@ -1,0 +1,9 @@
+
+**NAME**
+       donate - gives you information on the donation links
+
+**SYNOPSIS**
+       donate
+
+**DESCRIPTION**
+       Displays 3 url and its info, including a PayPal link, a Patreon link, and the Discord support server.
