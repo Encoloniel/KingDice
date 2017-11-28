@@ -247,7 +247,7 @@ module.exports = {
     }
 
     if (isCommand(message, "purge")) {
-      if (checkPerms("BAN_MEMBERS", "manage messages")) {
+      if (checkPerms("MANAGE_MESSAGES", "manage messages")) {
         purge.purpose(message)
       }
     }
