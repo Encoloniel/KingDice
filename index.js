@@ -1,13 +1,15 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 const shelljs = require('shelljs');
+const fs = require('fs');
+const path = require('path');
+
 const {
   stripIndents
 } = require('common-tags');
 
 //LOCAL REQUIREMENTS
 const ess = require('./ess');
-const bot = require('./bot.json');
 const commands = require('./commands.js');
 
 client.on('ready', () => {
@@ -29,7 +31,8 @@ client.on('guildMemberAdd', member => {
 
 // Create an event listener for messages
 client.on('message', message => {
-
+  var botData = fs.readFileSync(path.join(__dirname, '.') + '/bot.json');
+  var bot = JSON.parse(botData);
   //Quit if it is a bot.
   if (message.author.bot == true) {
     return;
@@ -56,15 +59,11 @@ client.on('message', message => {
   if (messplit[0] !== bot.prefix) {
     return;
   }
-
-  //maintenece check
-  if (bot.maintenance == true) {
-    if (message.author.id !== bot.ownerid) {
-      message.channel.send("The bot is currently on maintenance mode. Sorry for the inconvinence. You can check back later to see what commands it can do. It will be a great update!")
-      return;
-    }
+  //maintenance check
+  if (message.author.id !== bot.ownerid && bot.maintenance == true) {
+    message.channel.send("The bot is currently on maintenance mode. Sorry for the inconvinence. You can check back later to see what commands it can do. It will be a great update! MY NAME IS MAC")
+    return;
   }
-
   try {
     commands.allCommands(message, client, Discord)
     commands.adminCommands(message, client, Discord)
@@ -119,4 +118,4 @@ client.on('message', message => {
 });
 
 
-client.login(bot.token);
+client.login(require('./bot.json').token);
