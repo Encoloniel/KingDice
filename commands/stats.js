@@ -66,14 +66,14 @@ module.exports = {
             .setColor(0xd38cff)
             .setThumbnail("https://nodejs.org/static/images/logo-hexagon.png")
             .setTimestamp(new Date())
-            .setFooter("King Dice", client.user.avatarURL)
-            .addField("CPU Percentage", `${percentageCPU}%`)
-            .addField("RAM Usage", `${Math.round(process.memoryUsage().heapUsed/ 1024 / 1024 * 100) / 100} MB`)
-            .addField("Uptime", `${process.uptime().toString().toHHMMSS()}`)
-            .addField("Guilds", client.guilds.array().length)
-            .addField("Users", botMembers)
-            .addField("Bot Version", `v${botInfo.version}`)
-            .addField("DiscordJS Version", `v${botInfo.dependencies["discord.js"].slice(1)}`)
+            .setFooter("King Dice", client.user.avatarURL, true)
+            .addField("CPU Percentage", `${percentageCPU}%`, true)
+            .addField("RAM Usage", `${Math.round(process.memoryUsage().heapUsed/ 1024 / 1024 * 100) / 100} MB`, true)
+            .addField("Uptime", `${process.uptime().toString().toHHMMSS()}`, true)
+            .addField("Guilds", client.guilds.array().length, true)
+            .addField("Users", botMembers, true)
+            .addField("Bot Version", `v${botInfo.version}`, true)
+            .addField("DiscordJS Version", `v${botInfo.dependencies["discord.js"].slice(1)}`, true)
 
           message.channel.send(rich);
 
