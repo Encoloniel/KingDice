@@ -17,7 +17,7 @@ module.exports = {
             try {
               for (var i = 0; i < 3; i++) {
                 rannum = parseInt(Math.random() * (20 - 1) + 5)
-                message.edit(magicballanswers[rannum])
+                message.edit(":8ball: " + magicballanswers[rannum])
               }
             } catch (err) {
               message.channel.send(ess.errorHandle(err));
