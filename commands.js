@@ -122,7 +122,13 @@ module.exports = {
       translate.purpose(message)
     }
     if (isCommand(message, "verify")) {
-      verify.purpose(message, client)
+      if (!bot.hasPermission("MANAGE_ROLES")) {
+        message.channel.send(`I don't have perms manage roles.`)
+        return false;
+      } else {
+        verify.purpose(message, client)
+        return true;
+      }
     }
     if (isCommand(message, "userinfo")) {
       userinfo.purpose(message, client, Discord)
