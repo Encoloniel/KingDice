@@ -59,12 +59,12 @@ client.on('message', message => {
       .setTitle("Newbie guide to King Dice")
       .setDescription(`Hello, user, you look like you have almost to no idea what is going on. King Dice is a bot user. Which means it's **not** controlled by a human or viewed by another human. Any process with the bot will guarantee 99% anonymity from the creators of this bot. You can interact with this bot, and it has a lot of cool features. To interact with the bot, you first need to assign a command to the bot. Commands are made up with the "prefix", and the "command name". For this bot, the prefix would be the equal symbol: "=". Here are some basic commands.`)
       .setColor(0xd38cff)
-      .setThumbnail("https://nodejs.org/static/images/logo-hexagon.png")
       .setTimestamp(new Date())
-      .setFooter("=help", "This command allows the bot to message you with a full command list. This is everything the bot can do.")
-      .addField("=manual", "If you have problems with a single command, then you can use this command to learn everything about the command. (The manual page of the command)", true)
+      .addField("=help", "This command allows the bot to message you with a full command list. This is everything the bot can do.")
+      .addField("=manual", "If you have problems with a single command, then you can use this command to learn everything about the command. (The manual page of the command)")
       .addField("Support", "If you are still stuck with King Dice, you can go to the support server: https://discord.gg/nVGgN93 by clicking on the link on the left side.")
     message.channel.send(rich)
+    return;
   }
 
   //All Other Commands
