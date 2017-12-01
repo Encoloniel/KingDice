@@ -27,7 +27,8 @@ module.exports = {
 
       // Text tools
       =${helpPanel.allCommands.textTools.join("\n=")}
-
+\`\`\`
+\`\`\`xl
 
       /* Commands Moderators Can Use */
       // Basic controls
@@ -35,10 +36,13 @@ module.exports = {
 
       // VERSION v${packagefile.version} release
       \`\`\`
+      You can also use the --onserver tag to view the commands on the server. If you are having trouble with the bot and its commands,
+      simply find our support server, or use the =manual command to find out the usage of a command. Thank you for using my bot.
+      -Louis (aka Lewis, encoloniel) <@322158876449308683>
       `)
 
     try {
-      if (message.content.split(" ")[1] === '--onserver') {
+      if (message.content.includes('--onserver')) {
         message.channel.send(helpmenu)
       } else {
         message.author.send(helpmenu).catch(err => message.channel.send("You have DMs disabled. I cannot message you the help panel :("))
