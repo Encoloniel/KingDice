@@ -11,3 +11,7 @@
 
 **PERMISSIONS**
         "MEMBER_BAN"
+
+**FLAGS**
+        "--silent"
+                Do not send any messages to the member that is banned.
