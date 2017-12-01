@@ -10,7 +10,7 @@ module.exports = {
       if (!role) {
         message.guild.createRole({
           name: 'Verified',
-          color: 'GREEN'
+          color: 'GREEN',
         }).catch(err => message.channel.send(ess.errorHandle(err)))
       }
       message.guild.member(message.author).addRole(role).catch(err => message.channel.send(ess.errorHandle(err)))
