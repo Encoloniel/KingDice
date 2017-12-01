@@ -1,0 +1,13 @@
+
+**NAME**
+       hexcolor - shows an image of a searched hex value
+
+**SYNOPSIS**
+       hexcolor
+       hexcolor <hexValue>
+
+**DESCRIPTION**
+       Displays a photo of the hexcolor from http://www.colorhexa.com/ and displays it in a embed with short description about the hex value.
+
+**CONSTRAINTS**
+      ```/^[0-9A-F]{6}$/i.test.(<hexValue>)```

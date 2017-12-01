@@ -43,6 +43,7 @@ const changelog = require('./commands/changelog')
 const maintenance = require('./commands/maintenance')
 const donate = require('./commands/donate')
 const bash = require('./commands/bash')
+const hexcolor = require('./commands/hexcolor')
 
 function isCommand(message, commandName) {
   if (message.content.split(" ")[0] == (bot.prefix + commandName)) {
@@ -162,6 +163,9 @@ module.exports = {
     }
     if (isCommand(message, "donate")) {
       donate.purpose(message, client)
+    }
+    if (isCommand(message, "hexcolor")) {
+      hexcolor.purpose(message, client, Discord)
     }
 
 
