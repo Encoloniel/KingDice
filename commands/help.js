@@ -42,7 +42,7 @@ module.exports = {
         message.channel.send(helpmenu)
       } else {
         message.author.send(helpmenu).catch(err => message.channel.send("You have DMs disabled. I cannot message you the help panel :("))
-        message.channel.send("Slided into your DMs!")
+        message.channel.send(`Help command sent to your DMs, **${message.author.username}**`)
       }
     } catch (err) {
       message.channel.send(ess.errorHandle(err));
