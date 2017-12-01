@@ -3,7 +3,7 @@
   "allCommands": {
     "features": ["help", "hello", "manual", "ping", "stats", "invite", "donate", "changelog"],
     "fun": ["roll", "random", "magicball", "christian", "music"],
-    "tools": ["translate", "dictionary", "userinfo", "verify", "rolenick", "nick", "serverinfo"],
+    "tools": ["translate", "dictionary", "userinfo", "verify", "rolenick", "nick", "serverinfo", "hexcolor"],
     "textTools": ["titlecase", "lowercase", "uppercase", "sentencecase", "hyphencase", "snakecase", "dotcase", "spellcheck"]
   },
   "moderatorCommands": {
