@@ -1,0 +1,16 @@
+
+**NAME**
+       betabetamusic - plays music from a YouTube link/id
+
+**SYNOPSIS**
+       betamusic
+       betamusic <join>
+       betamusic <leave>
+       betamusic <play>
+       betamusic <play> <link|id>
+
+**DESCRIPTION**
+       Use the command to first make the bot join the voice channel, and lets the bot play the music you have entered the command.
+
+**DISCLAIMER**
+        This is a beta feature, so it won't work perfectly. (BetaMusic is a beta feature of the music command.)

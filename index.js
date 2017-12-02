@@ -14,13 +14,13 @@ const commands = require('./commands.js');
 
 client.on('ready', () => {
   console.log('King Dice is on ready');
-  client.user.setGame(`=help | Guilds: ${client.guilds.array().length}`)
+  client.user.setGame(`=help | Guilds: ${client.guilds.size}`)
 });
 
 // Change playing status everytime the bot joins another server.
 client.on('guildCreate', server => {
   console.log('King Dice has joined a new server!');
-  client.user.setGame(`=help | Guilds: ${client.guilds.array().length}`).catch(e => console.log(e))
+  client.user.setGame(`=help | Guilds: ${client.guilds.size}`).catch(e => console.log(e))
   server.owner.send(`Thank you for adding me to your server! Few things to know to get started. My prefix is =, and you can do **=help** to see the commands you can do!`).catch(e => console.log(e))
 
 });
@@ -33,7 +33,7 @@ client.on('guildMemberAdd', member => {
 client.on('message', message => {
   var botData = fs.readFileSync(path.join(__dirname, '.') + '/bot.json');
   var bot = JSON.parse(botData);
-  /* FOR maintenance PURPOSES ONLY  
+  /* FOR maintenance PURPOSES ONLY
   if (message.author.id !== bot.ownerid) {
     return;
   }
