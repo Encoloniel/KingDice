@@ -25,7 +25,7 @@ client.on('guildCreate', server => {
 
 });
 client.on('guildMemberAdd', member => {
-  member.guild.systemChannel.send(`Warm welcome by King Dice! Good to see you, **${member.user.tag}**.`).catch(e => console.log(e))
+  //member.guild.systemChannel.send(`Warm welcome by King Dice! Good to see you, **${member.user.tag}**.`).catch(e => console.log(e))
 });
 
 

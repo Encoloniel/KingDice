@@ -2,7 +2,7 @@
   "introduction": "My prefix is **=**, if you forgot. These are the commands below!",
   "allCommands": {
     "features": ["help", "hello", "manual", "ping", "stats", "invite", "donate", "changelog"],
-    "fun": ["roll", "random", "magicball", "christian", "music", "betamusic"],
+    "fun": ["roll", "random", "magicball", "christian", "music", "betamusic", "tts"],
     "tools": ["translate", "dictionary", "userinfo", "verify", "rolenick", "nick", "serverinfo", "hexcolor"],
     "textTools": ["titlecase", "lowercase", "uppercase", "sentencecase", "hyphencase", "snakecase", "dotcase", "spellcheck"]
   },

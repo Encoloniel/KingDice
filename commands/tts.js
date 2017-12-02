@@ -6,7 +6,7 @@ const ytdl = require('ytdl-core');
 const opusscript = require('opusscript');
 
 module.exports = {
-  purpose: function(message, client, Discord) {
+  purpose: function(message) {
 
     let member = message.guild.member(message.author)
     try {
@@ -27,7 +27,7 @@ module.exports = {
       }
       var googleTtsApi = require("google-tts-api")
 
-      googleTtsApi(message.content.split(" ").slice(2).join(" "), message.content.split(" ")[1].toString(), 1)
+      googleTtsApi(message.content.split(" ").slice(1).join(" "), 'en', 1)
         .then(function(url) {
           member.voiceChannel.join().then(function(connection) {
             play(connection, url)

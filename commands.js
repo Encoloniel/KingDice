@@ -45,6 +45,7 @@ const donate = require('./commands/donate')
 const bash = require('./commands/bash')
 const hexcolor = require('./commands/hexcolor')
 const betamusic = require('./commands/betamusic')
+const tts = require('./commands/tts')
 
 function isCommand(message, commandName) {
   if (message.content.split(" ")[0] == (bot.prefix + commandName)) {
@@ -175,6 +176,9 @@ module.exports = {
     }
     if (isCommand(message, "hexcolor")) {
       hexcolor.purpose(message, client, Discord)
+    }
+    if (isCommand(message, "tts")) {
+      tts.purpose(message)
     }
 
 

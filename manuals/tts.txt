@@ -1,0 +1,10 @@
+
+**NAME**
+       tts - use Google Translate's TTS to convert text to speech in a voice channel
+
+**SYNOPSIS**
+       tts <sentence|word>
+       tts
+
+**DESCRIPTION**
+       Uses Google's API to say in speech in a voiceChannel that you are in. Only supports English at this time.
