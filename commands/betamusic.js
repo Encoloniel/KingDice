@@ -4,6 +4,7 @@ const {
 } = require('common-tags');
 const ytdl = require('ytdl-core');
 const opusscript = require('opusscript');
+const bot = require('../bot.json');
 
 module.exports = {
   purpose: function(message, client, Discord) {
@@ -11,11 +12,10 @@ module.exports = {
     try {
 
       // Play function
-      function play(connection, message) {
+      function play(connection, video) {
         let server = member.voiceChannel
-        let music = message.content.split(" ").slice(2).toString()
         server.dispatcher = connection.playStream(
-          ytdl(music, {
+          ytdl(video, {
             filter: "audioonly"
           })
         )
@@ -26,30 +26,47 @@ module.exports = {
         return;
       }
       if (!message.content.split(" ")[1]) {
-        message.channel.send("Second argument must be either ```<join|leave|play>```")
+        message.channel.send("Second argument must be either ```<leave|play>```")
         return;
-      }
-      if (message.content.split(" ")[1] == "join") {
-        member.voiceChannel.join()
-        message.channel.send("I joined in your channel!")
       }
       if (message.content.split(" ")[1] == "leave") {
         member.voiceChannel.leave()
         message.channel.send("I leaved the channel!")
       }
       if (message.content.split(" ")[1] == "play") {
+        member.voiceChannel.leave()
         if (!message.content.split(" ")[2]) {
           message.channel.send("Provide a music link please.")
           return;
         }
-        if (ytdl.validateURL(message.content.split(" ")[2]) || ytdl.validateID(message.content.split(" ")[2])) {
-          message.channel.send("Not a valid link/id")
-          return;
+        let video = message.content.split(" ").slice(2).join(" ")
+        let videoName = "Undefined"
+
+        if (!ytdl.validateURL(video) && !ytdl.validateID(video)) {
+          var search = require('youtube-search');
+          var opts = {
+            maxResults: 5,
+            key: bot.apiKey
+          };
+          search(video, opts, function(err, results) {
+            if (err) return console.log(err);
+            for (var i = 0; i < results.length; i++) {
+              if (results[i].kind == "youtube#video") {
+                video = results[i].id
+                videoName = results[i].title
+                message.channel.send(`Now playing: **${videoName}**`)
+                return;
+              }
+            }
+          })
+          //If the search is not a id or a link
+        } else {
+          message.channel.send(`Now playing: **${video}**`)
         }
         member.voiceChannel.join().then(function(connection) {
-          play(connection, message)
+          play(connection, video)
         })
-        message.channel.send(`Now playing: **${message.content.split(" ")[2]}**`)
+
       }
 
       return;

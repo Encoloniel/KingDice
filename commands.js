@@ -44,6 +44,7 @@ const maintenance = require('./commands/maintenance')
 const donate = require('./commands/donate')
 const bash = require('./commands/bash')
 const hexcolor = require('./commands/hexcolor')
+const betamusic = require('./commands/betamusic')
 
 function isCommand(message, commandName) {
   if (message.content.split(" ")[0] == (bot.prefix + commandName)) {
@@ -160,6 +161,9 @@ module.exports = {
     }
     if (isCommand(message, "music")) {
       music.purpose(message, client, Discord)
+    }
+    if (isCommand(message, "betamusic")) {
+      betamusic.purpose(message, client, Discord)
     }
     if (isCommand(message, "spellcheck")) {
       spellcheck.purpose(message)

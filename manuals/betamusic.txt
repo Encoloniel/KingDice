@@ -4,13 +4,12 @@
 
 **SYNOPSIS**
        betamusic
-       betamusic <join>
        betamusic <leave>
        betamusic <play>
-       betamusic <play> <link|id>
+       betamusic <play> <link|id|searchTerm>
 
 **DESCRIPTION**
-       Use the command to first make the bot join the voice channel, and lets the bot play the music you have entered the command.
+       Use the command to first make the bot join the voice channel, and lets the bot play the music you have entered the command. The searchTerm uses the Google's API to get search results from Google/YouTube.
 
 **DISCLAIMER**
         This is a beta feature, so it won't work perfectly. (BetaMusic is a beta feature of the music command.)
