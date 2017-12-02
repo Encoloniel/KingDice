@@ -33,7 +33,7 @@ client.on('guildMemberAdd', member => {
 client.on('message', message => {
   var botData = fs.readFileSync(path.join(__dirname, '.') + '/bot.json');
   var bot = JSON.parse(botData);
-  /* FOR maintenance PURPOSES ONLY 
+  /* FOR maintenance PURPOSES ONLY  
   if (message.author.id !== bot.ownerid) {
     return;
   }
