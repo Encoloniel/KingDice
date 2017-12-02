@@ -1,6 +1,6 @@
 {
   "name": "kingdice",
-  "version": "1.7",
+  "version": "1.7.0",
   "description": "Moderation bot for Discord",
   "main": "index.js",
   "scripts": {

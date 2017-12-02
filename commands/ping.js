@@ -7,9 +7,14 @@ module.exports = {
         embed: {
           color: 0xd38cff,
           fields: [{
-            name: "Message Roundtrip",
-            value: `${Math.abs(Date.now() - message.createdTimestamp)} ms`
-          }],
+              name: "Message Roundtrip",
+              value: `${Math.abs(Date.now() - message.createdTimestamp)} ms`
+            },
+            {
+              name: "Ping",
+              value: "pinging..."
+            }
+          ],
           timestamp: new Date(),
           footer: {
             icon_url: client.user.avatarURL,
@@ -17,6 +22,10 @@ module.exports = {
           }
         }
       }
+      message.channel.send(embedMessage).then(sent => {
+        embedMessage.embed.fields[2].value = sent.createdTimestamp - message.createdTimestamp + "ms"
+        sent.edit(embedMessage);
+      });
       message.channel.send(embedMessage);
       return;
     } catch (err) {
