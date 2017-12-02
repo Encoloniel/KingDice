@@ -50,8 +50,7 @@ function isCommand(message, commandName) {
   if (message.content.split(" ")[0] == (bot.prefix + commandName)) {
     return true;
   } else {
-    if (message.content.split(" ")[0] == (`<@379800674856206336> ` + commandName)) {
-      console.log(message.content.split(" ").slice(1).join(" "));
+    if (message.content.split(" ").slice(0, 1) == (`<@379800674856206336> ` + commandName)) {
       message.content = message.content.split(" ").slice(1).join(" ")
       return true;
     } else {
