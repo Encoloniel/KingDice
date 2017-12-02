@@ -33,11 +33,11 @@ client.on('guildMemberAdd', member => {
 client.on('message', message => {
   var botData = fs.readFileSync(path.join(__dirname, '.') + '/bot.json');
   var bot = JSON.parse(botData);
-  /* FOR maintenance PURPOSES ONLY
+  /* FOR maintenance PURPOSES ONLY */
   if (message.author.id !== bot.ownerid) {
     return;
   }
-*/
+
 
   //Quit if it is a bot.
   if (message.author.bot == true) {
@@ -75,8 +75,7 @@ client.on('message', message => {
 
   //All Other Commands
   //Check before if it is a command
-  let messplit = message.content.split("")
-  if (messplit[0] !== bot.prefix) {
+  if (!message.content.startsWith(bot.prefix) && !message.content.startsWith(`<@${client.user.id}>`)) {
     return;
   }
   //maintenance check

@@ -46,7 +46,7 @@ const bash = require('./commands/bash')
 const hexcolor = require('./commands/hexcolor')
 
 function isCommand(message, commandName) {
-  if (message.content.split(" ")[0] == (bot.prefix + commandName)) {
+  if (message.content.startsWith(bot.prefix + commandName) || message.content.startsWith(`<@379800674856206336> ` + commandName)) {
     return true;
   } else {
     return false;
