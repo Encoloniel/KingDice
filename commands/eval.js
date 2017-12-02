@@ -5,11 +5,26 @@ module.exports = {
     try {
 
       // For the help of eval
-      let guild = message.guild
-      let me = message.guild.member(message.author)
+
+      //Users
+      let Guild = message.guild
+      let User = message.guild.member(message.author).user
+      let GuildUser = message.guild.member(message.author)
+      let Client = client
+      let ClientUser = client.user
+      let GuildUserClient = message.guild.member(client)
+
+      //Channels
+      let GuildChannel = message.channel
+      let VoiceChannel = GuildUser.voiceChannel
+
+
+      function getMember(id) {
+        return message.guild.members.get(id)
+      }
 
       function getUser(id) {
-        return message.guild.members.get(id)
+        return client.users.get(id)
       }
 
       const args = message.content.split(" ").slice(1);
