@@ -1,4 +1,15 @@
 const ess = require('../ess');
+const commonTags = require("common-tags")
+const Discord = require("discord.js")
+const googleTranslateApi = require("google-translate-api")
+const googleTtsApi = require("google-tts-api")
+const isoLanguageConverter = require("iso-language-converter")
+const opusScript = require("opusscript")
+const shellJs = require("shelljs")
+const spelling = require("spelling")
+const urbanDictionary = require("urban-dictionary")
+const youtubeSearch = require("youtube-search")
+const ytdlCore = require("ytdl-core")
 
 module.exports = {
   purpose: function(message, client) {
