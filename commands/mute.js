@@ -19,16 +19,16 @@ module.exports = {
           name: 'Muted',
           color: 'BLACK',
         }).catch(err => message.channel.send(ess.errorHandle(err)))
+        message.channel.send("There was no Muted role so I created it. Try the mute command again.")
+        return;
       }
 
-      message.guild.member(member).addRole(role)
-        .then(() => {
-          message.channel.send(`Muted User!`)
-        })
-        .catch(() => {
-          message.channel.send(`Uhm, for some reason I can't do that! Maybe the role does not exsist? Maybe permission problems? :thinking:`)
-        })
-
+      member.setMute(true)
+      message.channel.overwritePermissions(member, {
+        "SEND_MESSAGES": false
+      })
+      member.addRole(role)
+      message.channel.send("Muted!")
     } catch (err) {
       message.channel.send(ess.errorHandle(err));
     }

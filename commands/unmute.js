@@ -13,13 +13,10 @@ module.exports = {
         return;
       }
 
-      if (!member.roles.find("name", "Muted")) {
-        message.channel.send("User is already unmuted!")
-        return;
-      }
-
-      message.guild.member(member).removeRole(role).catch(err => message.channel.send(ess.errorHandle(err)))
-      message.channel.send("Unmuted User")
+      member.removeRole(role).catch(e => e)
+      member.setMute(false)
+      message.channel.permissionOverwrites.get(member.id).delete()
+      message.channel.send("Unmuted User!")
       return;
     } catch (err) {
       message.channel.send(ess.errorHandle(err));

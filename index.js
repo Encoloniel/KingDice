@@ -38,6 +38,9 @@ client.on('message', message => {
   if (message.author.bot == true) {
     return;
   }
+  if (message.author == client.user) {
+    return;
+  }
   // Quit if it is from a DM
   if (!message.guild) {
     message.channel.send("DM isn't sufficient for my help. Reach in a server.")

@@ -284,7 +284,9 @@ module.exports = {
     if (isCommand(message, "mute")) {
       if (checkPerms("MUTE_MEMBERS", "mute members")) {
         if (checkPerms("MANAGE_ROLES", "give member the muted role")) {
-          mute.purpose(message, client)
+          if (checkPerms("MANAGE_CHANNELS"), "manage channels") {
+            mute.purpose(message, client)
+          }
         }
       }
     }
@@ -292,7 +294,9 @@ module.exports = {
     if (isCommand(message, "unmute")) {
       if (checkPerms("MUTE_MEMBERS", "unmute members")) {
         if (checkPerms("MANAGE_ROLES", "remve the member's muted role")) {
-          unmute.purpose(message)
+          if (checkPerms("MANAGE_CHANNELS"), "manage channels") {
+            unmute.purpose(message)
+          }
         }
       }
     }
