@@ -1,6 +1,6 @@
 {
   "name": "kingdice",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "Moderation bot for Discord",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,7 @@
   "dependencies": {
     "common-tags": "^1.4.0",
     "discord.js": "^11.2.1",
+    "google": "^2.1.0",
     "google-translate-api": "^2.3.0",
     "google-tts-api": "0.0.2",
     "iso-language-converter": "^1.1.0",

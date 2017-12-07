@@ -46,6 +46,7 @@ const bash = require('./commands/bash')
 const hexcolor = require('./commands/hexcolor')
 const betamusic = require('./commands/betamusic')
 const tts = require('./commands/tts')
+const google = require('./commands/google')
 
 function isCommand(message, commandName) {
   if (message.content.split(" ")[0] == (bot.prefix + commandName)) {
@@ -180,7 +181,9 @@ module.exports = {
     if (isCommand(message, "tts")) {
       tts.purpose(message)
     }
-
+    if (isCommand(message, "google")) {
+      google.purpose(message, client, Discord)
+    }
 
 
     if (isCommand(message, "rolenick")) {

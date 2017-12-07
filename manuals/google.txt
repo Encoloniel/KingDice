@@ -1,0 +1,9 @@
+**NAME**
+       google - search a query in google
+
+**SYNOPSIS**
+       google
+       google <query>
+
+**DESCRIPTION**
+       Searches Google for the query and displays in a embed the first result or the second (Depending on the link's title. If link's title is an empty string, it will display the second result)
