@@ -3,6 +3,8 @@ const ess = require('../ess');
 module.exports = {
   purpose: function(message, client, Discord) {
     try {
+      message.channel.send("The command is on fix due to NSFW loophole reasons. Please check on it later.")
+      return
       var google = require('google')
       let splitmes = message.content.split(" ")
       google.resultsPerPage = 5
