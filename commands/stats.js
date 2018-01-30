@@ -34,10 +34,7 @@ module.exports = {
           var percentageCPU = 100 - ~~(100 * idleDifference / totalDifference);
           //CPU STUFF OVER
 
-          var botMembers = 0
-          for (var i = 0; i < client.guilds.array().length; i++) {
-            botMembers = botMembers + client.guilds.array()[i].memberCount
-          }
+          var botMembers = client.users.size
 
           //HHMMSS
           String.prototype.toHHMMSS = function() {
